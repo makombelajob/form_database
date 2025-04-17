@@ -24,7 +24,11 @@ try{
 
     // On définit le mode de gestion des erreurs pour qu'elles envoient une exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+<<<<<<< HEAD
     echo '<p class="fs-1 text-center text-uppercase">connected</p>';
+=======
+    echo 'connected';
+>>>>>>> d7b8b52615c5a1a8e3c36f5a8dab6b1c58dd3b18
 } catch (PDOException $exception) {
     // Ce bloc s'exécute si on a une erreur dans try
     // Si PDO échoue on met un message d'erreur

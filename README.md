@@ -66,6 +66,7 @@ A simple CSS style is applied to enhance the look of the form.
 
 ## 🖼 Screenshot
 
+
 ![Screenshot](/app/assets/screenshot.png)
 
 ---
