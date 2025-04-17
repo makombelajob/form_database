@@ -77,6 +77,7 @@ A simple CSS style is applied to enhance the look of the form.
    ```bash
    git clone https://github.com/your-username/php-registration-form.git
    cd php-registration-form
+   docker compose up
    
 
 ## 📂 Project Structure
@@ -93,7 +94,7 @@ Formulaire/
 ## 🛠 Technologies Used
 
     PHP 8.x
-
+    MYSQL 8.x
     HTML5 / CSS3
 
     No database required (pure server-side validation)
