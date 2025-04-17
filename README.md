@@ -97,7 +97,6 @@ Formulaire/
     MYSQL 8.x
     HTML5 / CSS3
 
-    No database required (pure server-side validation)
 
 ## 👨‍💻 Author
 
