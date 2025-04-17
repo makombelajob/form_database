@@ -1,0 +1,71 @@
+services:
+    apache:
+        image: php:8.5-apache
+        container_name: benoit_formInsertq
+        build:
+            context: ./php
+        ports:
+            -   "8080:80"
+        volumes:
+            -   ./app:/var/www/html/
+        depends_on:
+            -   database
+
+    database:
+        image: mysql:8.0
+        container_name: benoit_formInsertf
+        environment:
+            MYSQL_ROOT_PASSWORD: admin7791
+            MYSQL_DATABASE: tp1604
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: admin77911
+        ports:
+            -   "3306:3306"
+        volumes:
+            -   ./mysql:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin
+        container_name: benoit_formInsertr
+        ports:
+            -   "8081:80"
+        environment:
+            PMA_HOST: database
+            PMA_PASSWORD: admin7791
+        depends_on:
+            -   database
+
+    postgresql:
+        image: bitnami/postgresql
+        container_name: benoit_formInserte
+        environment:
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: sondageRdc
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./postgres:/bitnami/postgresql
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: benoit_formInsertd
+        environment:
+            PGADMIN_DEFAULT_EMAIL: admin@example.com
+            PGADMIN_DEFAULT_PASSWORD: admin
+        ports:
+            -   "8082:80"
+        depends_on:
+            -   postgresql
+
+    mail_hog:
+        image: mailhog/mailhog
+        container_name: benoit_formInsertM
+        logging:
+            driver: 'none'
+        ports:
+            -   "1025:1025"
+            -   "8025:8025"
+        
+
+    
